@@ -45,7 +45,7 @@ int main() {
     printf("\n");
 
     numPointer += 1;
-    numPointer2 += 50;
+    numPointer2 += 11;
 
     printf("The current value for num: %d\n", num);
     printf("The current value for num2: %d\n", num2);
