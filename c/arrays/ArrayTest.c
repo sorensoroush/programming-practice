@@ -23,5 +23,11 @@ int main() {
     printf("Content of nums[4] (*(nums + 4)): %d\n", *(nums + 4));
     printf("Address of nums[4] (nums + 4): %d\n", nums + 4);
     printf("Address of nums[4] (&nums[4]): %d\n", &nums[4]);
+    // /*
+    printf("Content of nums[5] (nums[5]): %d\n", nums[5]);
+    printf("Content of nums[5] (*(nums + 5)): %d\n", *(nums + 5));
+    printf("Address of nums[5] (nums + 5): %d\n", nums + 5);
+    printf("Address of nums[5] (&nums[5]): %d\n", &nums[5]);
+    // */
     printf("\n");
 }
