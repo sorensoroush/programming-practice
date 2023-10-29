@@ -4,7 +4,23 @@
 void printString(char str[]);
 
 int main() {
-    char inputStr[] = "";
+    char inputStr[] = "Test";
+    char junkStr[20];
+    junkStr[0] = 'J';
+    junkStr[1] = 'u';
+    junkStr[2] = 'n';
+    junkStr[3] = 'k';
+    junkStr[4] = ':';
+    junkStr[5] = ' ';
+    // junkStr[6] = '\0';
+
+    printf("\n");
+    printf("Contents of inputStr: %s\n", inputStr);
+    printf("Length of inputStr: %d\n", strlen(inputStr));
+    printf("Byte length of inputStr: %d\n", sizeof(inputStr));
+    printf("Contents of junkStr: %s\n", junkStr);
+    printf("Length of junkStr: %d\n", strlen(junkStr));
+    printf("Byte length of junkStr: %d\n", sizeof(junkStr));
 
     printf("\n");
     printf("Input a string: ");
