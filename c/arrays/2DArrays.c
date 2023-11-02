@@ -34,4 +34,8 @@ int main() {
     printf("Address of implicit__2Array + 1: %d\n", implicit__2Array + 1);
     printf("Address of *(implicit__2Array) + 1: %d\n", *(implicit__2Array) + 1);
     printf("\n");
+    
+    printf("If dimensions specified = dimensions in array, value is referenced\n");
+    printf("Value of explicit3_2Array[1][2]: %d\n", explicit3_2Array[1][2]);
+    printf("\n");
 }
