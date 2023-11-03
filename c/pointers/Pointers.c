@@ -33,11 +33,11 @@ int main() {
     printf("\n");
 
     printf("The current value for num: %d\n", num);
-    printf("The current value for num2: %d\n", num2);
     printf("The current value for numPointer: %d\n", numPointer);
+    printf("The current value for numPointer's dereferenced value: %d\n", *numPointer);
+    printf("The current value for num2: %d\n", num2);
     printf("The current value for numPointer2: %d\n", numPointer2);
-    printf("The current value for numPointer's value: %d\n", *numPointer);
-    printf("The current value for numPointer2's value: %d\n", *numPointer2);
+    printf("The current value for numPointer2's dereferenced value: %d\n", *numPointer2);
 
     printf("\n");
     printf("Attempting adding 1 to pointerNum...\n");
