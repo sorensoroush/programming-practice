@@ -25,6 +25,7 @@ int main() {
     printf("The current value for num after pointing to it: %d\n", num);
     printf("The current value for numPointer: %d\n", numPointer);
     printf("The current value for numPointer via derefencing: %d\n", *numPointer);
+    printf("\n");
     printf("The current value for num2 before pointing to it: %d\n", num2);
     printf("The current value for numPointer2: %d\n", numPointer2);
     printf("The current value for numPointer2 via derefencing: %d\n", *numPointer2);
@@ -40,6 +41,7 @@ int main() {
     printf("The current value for numPointer: %d\n", numPointer);
     printf("The current value for numPointer's dereferenced value: %d\n", *numPointer);
     printf("The current value for num2: %d\n", num2);
+    printf("\n");
     printf("The current value for numPointer2: %d\n", numPointer2);
     printf("The current value for numPointer2's dereferenced value: %d\n", *numPointer2);
 
