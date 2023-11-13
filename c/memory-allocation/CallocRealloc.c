@@ -15,27 +15,103 @@ int main() {
     int callocArray[] = {5,6,7,8,9};
 
     int* mallocPointer = malloc(arraySize * sizeof(int));
-    int* callocPointer = calloc(5, sizeof(int));
+    int* callocPointer = calloc(arraySize, sizeof(int));
 
     printf("\n");
-    printf("Memory address of mallocPointer (&mallocPointer): %d\n", &mallocPointer);
     printf("Allocated memory address stored in mallocPointer (mallocPointer): %d\n", mallocPointer);
     printf("Contents of allocated memory address (*mallocPointer): ");
     printArray(mallocPointer, arraySize);
-    printf("\n");
 
     printf("\n");
-    printf("Memory address of callocPointer (&callocPointer): %d\n", &callocPointer);
     printf("Allocated memory address stored in callocPointer (callocPointer): %d\n", callocPointer);
     printf("Contents of allocated memory address (*callocPointer): ");
     printArray(callocPointer, arraySize);
-    printf("\n");
     // It seems calloc() zeroes out an extra byte, not sure why this happens
+
+    printf("\n");
+    printf("Procedurally writing values to allocated pointers...\n");
+
+    writeArray(mallocArray, mallocPointer, arraySize);
+    writeArray(callocArray, callocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in mallocPointer (mallocPointer): %d\n", mallocPointer);
+    printf("Contents of allocated memory address (*mallocPointer): ");
+    printArray(mallocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in callocPointer (callocPointer): %d\n", callocPointer);
+    printf("Contents of allocated memory address (*callocPointer): ");
+    printArray(callocPointer, arraySize);
+
+    printf("\n");
+    printf("Reallocating contents of mallocPointer...\n");
+
+    int* reallocPointer = realloc(mallocPointer, 2 * arraySize * sizeof(int));
+
+    printf("\n");
+    printf("Allocated memory address stored in mallocPointer (mallocPointer): %d\n", mallocPointer);
+    printf("Contents of allocated memory address (*mallocPointer): ");
+    printArray(mallocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in callocPointer (callocPointer): %d\n", callocPointer);
+    printf("Contents of allocated memory address (*callocPointer): ");
+    printArray(callocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in reallocPointer (reallocPointer): %d\n", reallocPointer);
+    printf("Contents of allocated memory address (*reallocPointer): ");
+    printArray(reallocPointer, arraySize * 2);
+
+    printf("\n");
+    printf("Notice how the values of mallocPointer were copied\n");
+    printf("Procedurally copying values of callocPointer to second half of reallocPointer's memory...\n");
+
+    writeArray(callocPointer, reallocPointer + arraySize, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in mallocPointer (mallocPointer): %d\n", mallocPointer);
+    printf("Contents of allocated memory address (*mallocPointer): ");
+    printArray(mallocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in callocPointer (callocPointer): %d\n", callocPointer);
+    printf("Contents of allocated memory address (*callocPointer): ");
+    printArray(callocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in reallocPointer (reallocPointer): %d\n", reallocPointer);
+    printf("Contents of allocated memory address (*reallocPointer): ");
+    printArray(reallocPointer, arraySize * 2);
+
+    printf("\n");
+    printf("Freeing all three pointers...\n");
+
+    free(mallocPointer);
+    free(callocPointer);
+    free(reallocPointer);
+
+    printf("\n");
+    printf("Allocated memory address stored in mallocPointer (mallocPointer): %d\n", mallocPointer);
+    printf("Contents of allocated memory address (*mallocPointer): ");
+    printArray(mallocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in callocPointer (callocPointer): %d\n", callocPointer);
+    printf("Contents of allocated memory address (*callocPointer): ");
+    printArray(callocPointer, arraySize);
+
+    printf("\n");
+    printf("Allocated memory address stored in reallocPointer (reallocPointer): %d\n", reallocPointer);
+    printf("Contents of allocated memory address (*reallocPointer): ");
+    printArray(reallocPointer, arraySize * 2);
+    printf("\n");
 
     /*
     Initialize two arrays
     Specify these are values to be written, not array to copy
-    Initialize three pointers: malloc, calloc, realloc
+    Initialize three pointers: malloc, calloc
         Allocate memory using appropriate command
     Print pointer, pointer's address, and deferenced content 
     Write contents of array to allocated memory
@@ -52,6 +128,7 @@ void printArray(int* arrayStart, int size) {
         printf("%d ", *arrayStart);
         arrayStart++;
     }
+    printf("\n");
 }
 
 void writeArray(int* arrayCopy, int* arrayPaste, int size) {
