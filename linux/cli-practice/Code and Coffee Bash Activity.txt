@@ -1,0 +1,72 @@
+﻿To work on the activity please visit: https://replit.com/@CharlesInwald1/CodeandCoffeeBashWorkshop 
+Hit “Fork and Run”
+1. Navigation and File Listing
+Objective: Learn to navigate the file system and list directory contents.
+Task: Use ls to list the contents of the /bin directory. Then, use cd to navigate to another directory and list its contents. Then cd ../ to return to the parent directory.  When done, you should go back to the home directory (~/ is shorthand for this)
+* What is the purpose of the /bin directory?
+
+
+2. Creating Files and Directories
+Objective: Understand how to create directories and files.
+Task: Use mkdir to create a new directory and touch to create a new file named example.txt inside it. Verify by listing the contents of the directory.
+
+
+3. Copying and Moving Files
+Objective: Practice copying and moving files.
+Task: Using cp, copy example.txt to a new file named example_copy.txt within the same directory. Then, move example_copy.txt to another directory.
+
+
+4. File Content Manipulation
+Objective: Learn to view and manipulate file content.
+Task: Use man find to add the manual entry for find to example.txt, and then view its contents with cat. 
+* Hint: Use the > output operator to redirect the output of man to example.txt
+* It will only 
+
+
+5. Redirection and Piping
+Objective: Understand how to use redirection and piping.
+Task: Use grep to search for a term in example.txt and redirect the output to a new file. Then, use the pipe (|) operator to combine cat and grep for searching within example.txt.
+* Perhaps we want to figure out what the “-mount” argument does for the find command.  Use grep to find the string “mount” within the file (don’t use a dash as it will mess with grep). 
+
+
+6. File Permissions
+Objective: Learn to view and modify file permissions.
+Task: Use ls -l to view the permissions of example.txt, then change its permissions with chmod to make it executable. Then run ls -l again to see the permission added.
+
+
+7. Finding Files and Content
+Objective: Master file search techniques.
+Task: Use find to locate all .txt files within the directory, then use grep with xargs to search for a specific string across these files. 
+* Hint: remember the wildcard operator is *.   xargs executes command lines from standard input.  If you pipe find to it, it will apply the desired command on each file returned
+
+
+
+
+8. Using awk for Text Processing
+Objective: Get introduced to text processing with awk.
+- Run git clone https://gist.github.com/2657233.git to download the file (it may say it is already there, don’t worry)
+Task: Use awk to print specific columns from presidents.csv .
+* Hint: awk -F, will designate the comma as the separator for columns
+* Here is an awk command showcasing a lot of redirection:
+awk '{cmd="md5sum <<<"$1 ; cmd|getline md5; print $1,"MD5:" md5}' some_file.txt
+	Note the use of the print command, which takes arguments in the format $1, $2, $3,…
+The <<< means this
+Bonus Section
+Batch Renaming and Operations
+Objective: Perform batch operations on files.
+Task: Use a combination of find, xargs, and mv to rename all .txt files in the Workshop directory to .bak.
+
+
+Scripting Basics
+Objective: Apply knowledge in a simple bash script.
+Task: Write a bash script that uses a loop to create multiple directories named Session1, Session2, etc., each containing a file named notes.txt.
+
+
+Using sed for Advanced Text Manipulation
+Objective: Perform advanced text manipulations.
+Task: Use sed to find and replace a specific string in example.txt without opening the file.
+
+
+Automation with xargs
+Objective: Automate tasks using xargs.
+Task: Combine find, grep, and xargs to search for a string in all .bak files and replace it with another string, illustrating the power of command-line tools for batch processing.
