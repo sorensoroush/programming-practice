@@ -1,3 +1,32 @@
+import math
+
+def prime_factors(num):
+
+    dividend = num
+    dividend_sqrt = math.floor(math.sqrt(dividend))
+    primes = []
+
+    tested_prime = 2
+
+    # !^ Somehow add a function to this? And have the context work within this function?
+    # How do we have a function reassign variables within the context of another function?
+
+    # I think we can shift the dividend and reassign the sqrt
+    # If tested prime exceeds sqrt, it means the dividend is prime
+    # Then terminate everything and add the dividend to the primes
+    while dividend != 1:
+        if dividend % tested_prime == 0:
+            primes.append(tested_prime)
+            dividend /= tested_prime
+        else:
+            tested_prime += 1
+
+    return primes
+
+def prime_range():
+    print('Printing prime range...')
+    print
+
 def sequence():
     print('')
 
@@ -19,22 +48,34 @@ def sequence():
     else:
         print('Sorry, that is not a positive integer')    
 
-
-def prime_range():
-    print('Printing prime range...')
-
 def main():
     print('')
     
-    mode = input('Please select a mode { (s)equence, (p)rime range }: ')
+    # Add a way of selecting multiple modes
+    selection_list = ['f', 'p', 's', 'q']
 
-    match mode:
-        case 's':
-            sequence()
-        case 'p':
-            prime_range()
-        case _:
-            print("\n" + "I'm sorry, I didn't understand that")
+    mode = '_'
+
+    while mode not in selection_list:
+        mode = input('Please select a mode { prime (f)actors, (p)rime range, Collatz (s)equence } or (q)uit: ')
+
+        if mode in selection_list:
+            num_input = input('Please select a positive integer: ')
+                try
+            num = float(num_input)
+                if num 
+                match mode:
+                case 's':
+                    sequence()
+                case 'p':
+                    prime_range()
+        else:
+        
+# While the mode is not in the selection list:
+    # Ask for the mode
+    # If the mode is valid
+        #
+    # Else print an error message and try again
         
     print('')
 
