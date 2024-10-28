@@ -2,24 +2,25 @@ import math
 
 def prime_factors(num):
 
-    dividend = num
-    dividend_sqrt = math.floor(math.sqrt(dividend))
     primes = []
 
+    dividend = num
+    dividend_sqrt = math.floor(math.sqrt(dividend))
     tested_prime = 2
 
-    # !^ Somehow add a function to this? And have the context work within this function?
-    # How do we have a function reassign variables within the context of another function?
-
-    # I think we can shift the dividend and reassign the sqrt
+    # Upon successful divisor, reshift dividend and dividend_sqrt
     # If tested prime exceeds sqrt, it means the dividend is prime
     # Then terminate everything and add the dividend to the primes
-    while dividend != 1:
+
+    while tested_prime <= dividend_sqrt:
         if dividend % tested_prime == 0:
             primes.append(tested_prime)
-            dividend /= tested_prime
+            dividend //= tested_prime
+            dividend_sqrt = math.floor(math.sqrt(dividend))
         else:
             tested_prime += 1
+    
+    primes.append(dividend)
 
     return primes
 
@@ -49,27 +50,28 @@ def sequence():
         print('Sorry, that is not a positive integer')    
 
 def main():
+
+    selection_list = ['f', 'r', 's']
+
     print('')
-    
-    # Add a way of selecting multiple modes
-    selection_list = ['f', 'p', 's', 'q']
+    mode = input('Please select a mode { prime (f)actors, prime (r)ange, Collatz (s)equence }: ')
 
-    mode = '_'
+    if mode in selection_list:
+        num_input = input('Please select a positive integer: ')
+        num = int(num_input)
+        
+        match mode:
+            case 'f':
+                primes = prime_factors(num)
+                print(primes)
+            case 'r':
+                prime_range(num)
+            case 's':
+                sequence(num)
+    else:
+        print('Sorry, I didn\'t understand that')
 
-    while mode not in selection_list:
-        mode = input('Please select a mode { prime (f)actors, (p)rime range, Collatz (s)equence } or (q)uit: ')
-
-        if mode in selection_list:
-            num_input = input('Please select a positive integer: ')
-                try
-            num = float(num_input)
-                if num 
-                match mode:
-                case 's':
-                    sequence()
-                case 'p':
-                    prime_range()
-        else:
+# Do error handling later
         
 # While the mode is not in the selection list:
     # Ask for the mode
@@ -77,6 +79,5 @@ def main():
         #
     # Else print an error message and try again
         
-    print('')
 
 main()
