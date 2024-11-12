@@ -1,5 +1,6 @@
 import math
 
+
 def prime_factors(num):
 
     primes = []
@@ -24,31 +25,33 @@ def prime_factors(num):
             # ? Is there a way to skip composites without calling another function?
     
     primes.append(dividend)
+    primes.sort(reverse = True)
 
     # ? Could somehow add libraries in the future to test performance?
 
     return primes
 
+
 def sequence(mode, num):
-    print('')
-
-    input_integer = input('Please input a positive integer: ')
-
-    num = int(input_integer)
-
     if (num > 0):
+        if mode == 'primed':
+            print(prime_factors(num))
         while (num > 1):
             if (num % 2 == 1):
                 num = 3 * num + 1
+                if mode == 'primed':
+                    print(prime_factors(num))
             elif (num % 2 == 0):
                 num //= 2
             else:
                 print('Oops, how did this happen? An integer with a modulus 2 result other than 0 or 1?')
             
-            print(num)
+            if mode == 'default':
+                print(num) 
 
     else:
         print('Sorry, that is not a positive integer')    
+
 
 def main():
 
@@ -71,14 +74,17 @@ def main():
                 sequence('default', num)
     else:
         print('Sorry, I didn\'t understand that')
-
-# Do error handling later
         
-# While the mode is not in the selection list:
-    # Ask for the mode
-    # If the mode is valid
-        #
-    # Else print an error message and try again
+
+# === To Do ===
+#  
+# Differentiate prime sequencing vs default
+# Identify largest number
+# Identify length of sequence
+# Identify largest prime
+# Add libraries to test performance
+
+# (Do error handling later)
         
 
 main()
