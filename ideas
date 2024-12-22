@@ -1,0 +1,15 @@
+! Polynomial toy app
+
+! Graph theory generator app
+
+Domino coverable checker:
+	Input binary array of shape (x,y)
+	Output whether or not it is coverable
+	(If it is, print array of covers)
+
+Random turtle distribution:
+	Input number of steps
+	Input number of trials
+	Undergo simulations
+	Output distributions of distance from origin
+
