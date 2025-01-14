@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.20)  6 JAN 2025 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.12.20)  14 JAN 2025 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**first.tex
-(./first.tex
+**format-and-structure.tex
+(./format-and-structure.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -28,8 +28,8 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count193
 \l__pdf_internal_box=\box50
-) (./first.aux)
-\openout1 = `first.aux'.
+) (files/format-and-structure.aux)
+\openout1 = `format-and-structure.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -47,20 +47,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./first.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (files/format-and-structure.aux) ) 
 Here is how much of TeX's memory you used:
- 622 strings out of 480247
- 9305 string characters out of 5896150
- 291605 words of memory out of 5000000
- 18643 multiletter control sequences out of 15000+600000
- 470022 words of font info for 29 fonts, out of 8000000 for 9000
+ 638 strings out of 480247
+ 9677 string characters out of 5896150
+ 295635 words of memory out of 5000000
+ 18651 multiletter control sequences out of 15000+600000
+ 474902 words of font info for 36 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,5n,38p,148b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
-Output written on first.pdf (1 page, 4087 bytes).
+ 34i,5n,38p,167b,178s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/soren-wsltp/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
+Output written on files/format-and-structure.pdf (2 pages, 35894 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 8 compressed objects within 1 object stream
+ 153 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
