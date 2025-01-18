@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+\begin{document}
+% ---------------
+
+First testing some inline $\sqrt{34}$ math 
+
+Next for an environment using a snippet: $\sqrt[3]{8}=2$
+
+Time for some fractions using $\frac{2^3}{x_a^2}x^a_2$  
+
+How do symbols look in math env vs not math env?
+
+No math: (creates an error)
+
+Math: $\emptyset \infty \equiv \setminus \cdot \times \langle \rangle \hbar \dagger \nabla \downarrow \Downarrow \rightarrow \Rightarrow \epsilon \varepsilon \varpi$
+
+Practicing a numbered equation:
+
+\begin{equation}
+5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1
+\end{equation}
+
+\begin{equation*}
+\text{something} \cdot 8
+\end{equation*}
+
+\section{Something new}
+
+\begin{equation}
+a, b, c, \cdots, z
+\end{equation}
+
+\section{Another section}
+
+\begin{equation}
+1, 2, 3 \dotsc  \infty
+\end{equation}
+
+Time to try aligned equations:
+
+\begin{align*}
+    1234 &= 1234 \\
+    234 &= 2342 \\
+    11111111 &= 23422
+\end{align*}
+
+% ---------------
+\end{document}
