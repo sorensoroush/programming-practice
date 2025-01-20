@@ -1,9 +1,10 @@
 \documentclass{article}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
+\usepackage{amsmath, amssymb}
 
 \begin{document}
 % ---------------
+\numberwithin{equation}{section}
 
 First testing some inline $\sqrt{34}$ math 
 
@@ -21,6 +22,7 @@ Practicing a numbered equation:
 
 \begin{equation}
 5! = 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1
+\label{eq:first}
 \end{equation}
 
 \begin{equation*}
@@ -46,6 +48,41 @@ Time to try aligned equations:
     234 &= 2342 \\
     11111111 &= 23422
 \end{align*}
+
+$0\xleftarrow[5]{2x}\infty$
+
+$0\xrightarrow[5]{2x}\infty$
+
+
+\begin{equation}
+\begin{split}
+    a + b &= b \\
+    b &= c \\
+    c &= d
+\end{split}
+\end{equation}
+
+\begin{equation}
+    \frac{123}{234}
+\end{equation}
+
+$\sin\theta$
+
+Checking out various binomial typesets:
+
+\begin{equation}
+\begin{split}
+    \binom{2n}{n} \\
+    \dbinom{2n}{n} \\
+    \tbinom{2n}{n} \\
+    \dbinom{2n}{}
+\end{split}
+\end{equation}
+
+By the way, \ref{eq:first} is really cool!
+
+Testing maps for the imaps:
+
 
 % ---------------
 \end{document}
