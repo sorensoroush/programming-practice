@@ -1,0 +1,16 @@
+total 0
+lrwxrwxrwx 1 root root 7 Nov 22  2023 /bin -> usr/bin
+total 44
+drwxr-xr-x  2 root root   4096 Jul 20 06:44 backups
+drwxr-xr-x 12 root root   4096 Dec 20  2024 cache
+drwxrwxrwt  2 root root   4096 Nov 22  2023 crash
+drwxr-xr-x 39 root root   4096 Feb 13 06:13 lib
+drwxrwsr-x  2 root staff  4096 Apr 18  2022 local
+lrwxrwxrwx  1 root root      9 Nov 22  2023 lock -> /run/lock
+drwxrwxr-x  9 root syslog 4096 Jul 26 11:04 log
+drwxrwsr-x  2 root mail   4096 Nov 22  2023 mail
+drwxr-xr-x  2 root root   4096 Nov 22  2023 opt
+lrwxrwxrwx  1 root root      4 Nov 22  2023 run -> /run
+drwxr-xr-x 17 root root   4096 Jan 25  2025 snap
+drwxr-xr-x  4 root root   4096 Nov 22  2023 spool
+drwxrwxrwt  5 root root   4096 Jul 26 11:05 tmp
